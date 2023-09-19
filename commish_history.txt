@@ -1,0 +1,148 @@
+#Program initially written on 18-19/09/2023 by Connor Quimby (aka Dizgovzy). Feel free to use but please credit and keep this comment. 
+#Date format is in DD/MM/YYYY. You can change this, but it's a pain. The program is okay, I guess.
+#After downloading the EasyTimeline package, run the program through your command prompt to get an output in the folder
+#that EasyTimeline is stored in. Make sure to do cd (folder address) first.
+
+ImageSize  = width:1600 height:270
+PlotArea   = width:1500 height:100 left:50 bottom:75
+AlignBars  = justify
+DateFormat = dd/mm/yyyy
+Period     = from:01/01/2018 till:18/09/2023
+TimeAxis   = orientation:hor
+ScaleMajor = grid:red unit:year increment:1 start:01/01/2018
+ScaleMinor = grid:blue unit:month increment:1 start:01/01/2018
+
+Legend = orientation:vertical top:0.1 left:0.5 columns:4 columnwidth:300
+
+TextData =
+    pos:(1100,25) textcolor:black fontsize:XL text:The History of the Commissionership
+TextData =
+	pos:(1180,0) fontsize:M text:From January 2018 to September 2023
+TextData =
+	pos:(50,40) fontsize:S text:"All dates are in DD/MM/YYYY. Chart made by Connor (Dizgovzy), last updated 19/09/2023."
+TextData =
+	pos:(50,270) fontsize:XS text:Commissioner known as Deputy Commissioner during Naifon's Term.
+TextData =
+	pos:(50,260) fontsize:XS text:"Gor Kebab lost elector status (ejected from WA for multying) on 02/01/2020. At the time, it was believed that this was due to Gor Kebab's fiancee using the same internet network as Gor Kebab. Runner-up Rivierenland appointed."
+TextData =
+	pos:(50,250) fontsize:XS text:"Rivierenland lost elector status (moved regions, to Thaecia) on 26/01/2020."
+TextData =
+	pos:(50,240) fontsize:XS text:"Wombelland appointed for being most endorsed non-government elector on 26/01/2020"
+TextData =
+	pos:(50,230) fontsize:XS text:"Gor Kebab appointed via the Commissions (Elections) Act 2020 on 24/02/2020, through the puppet Gor Nacho. It was revealed in 2023 by self-admission that Gor Kebab had been WA Multying, and thus arguably should not have been reinstated."
+TextData =
+	pos:(50,220) fontsize:XS text:"Telegrams (Campaign) Act 2020 passed in April."
+TextData =
+	pos:(50,210) fontsize:XS text:"Eurasies CTEd on 20/12/2020, position vacant until runner-up Eritei appointed on 22/12/2020."
+TextData =
+	pos:(50,200) fontsize:XS text:"Einswenn lost elector status (moved regions, to Forest) on 11/02/2021. Runner-up Republic of Satherland appointed."
+TextData =
+	pos:(50,190) fontsize:XS text:"Rivierenland lost elector status (resigned from WA) and was given 24 hours to rejoin. GanymedEuropa was then offered the position but did not respond. Walfo was then offered the position and accepted. 1DC vacant from 11/10/2021 to 14/10/2021."
+	
+#Defining colors and their associated nations in the legend. Every nation has to be put in here.
+Colors =
+	id:Naifon value:rgb(0.93,0.29,0.43) legend:Naifon
+	id:Feria value:yellow2 legend:Feria-Alkaline
+	id:Over value:rgb(0,1,1) legend:Overmorrow	
+	id:GNS value:rgb(0.83,0.77,0.99) legend:Great_New_Sealand
+	id:Thils value:rgb(0.82,0.41,0.12) legend:Thils
+	id:Aweland value:rgb(0.65,0.425,0.043) legend:Aweland
+	id:Qroma value:redorange legend:Qroma
+	id:TMP value:rgb(0,0,0.3) legend:The_Mongol_Plain
+	id:Scarlett value:red legend:St_Scarlett
+	id:SSM value:darkblue legend:South_St_Maarten
+	id:RI value:green legend:Regnum_Italiae
+	id:Yahlia value:yellow legend:Yahlia
+	id:Sparta value:brightgreen legend:Outer_Sparta
+	id:GK value:rgb(0.85,0.65,0.25) legend:Gor_Kebab
+	id:Helisweerde value:skyblue legend:Helisweerde_(known_as_Rivierenland_until_2022)
+	id:Wombelland value:claret legend:Wombelland
+	id:Eritei value:lavender legend:Eritei
+	id:Sather value:rgb(0.15,0.4,0.15) legend:Republic_of_Satherland
+	id:Eurasies value:gray(0.7) legend:Eurasies
+	id:Eins value:brightblue legend:Einswenn
+	id:KOD value:pink legend:The_Kingdom_of_Denmark	
+	id:Nardin value:rgb(0.04,0.24,0.08) legend:Nardin	
+	id:Apab value:rgb(0.9,0.85,0.75) legend:Apabeossie	
+	id:NNU value:oceanblue legend:The_New_Nordic_Union
+	id:Walfo value:lightorange legend:Walfo
+	id:NP value:coral legend:North_Portugal	
+	id:EPR value:rgb(0.6,0.8,0.2) legend:Eco-Paris_Reformation
+	id:BaH value:powderblue legend:Berlin_and_Hanover
+	id:Diz value:purple legend:Dizgovzy
+	id:Slavatania value:rgb(0.5,0.33,0) legend:Slavatania
+	id:Ottter value:rgb(0.8,0.52,0.247) legend:Ottterland
+
+PlotData=
+  bar:Commissioner width:25 mark:(line,white) align:center fontsize:S
+  
+  #Use gray(0.7) for CTEd nations
+  
+  from:start till:31/03/2018 color:Naifon
+  #POSITION KNOWN AS DEPUTY COMMISSIONER UNTIL END OF NAIFON'S TERM?
+  from:01/04/2018 till:30/06/2018 color:GNS
+  from:01/07/2018 till:30/09/2018 color:Aweland
+  from:01/10/2018 till:31/12/2018 color:TMP
+  from:01/01/2019 till:31/12/2019 color:RI
+  from:01/01/2020 till:02/01/2020 color:GK
+  #GOR KEBAB LOST EJECTOR STATUS (EJECTED FROM WA)
+  from:02/01/2020 till:26/01/2020 color:Helisweerde
+  #RIVIERENLAND LOST ELECTOR STATUS (MOVED REGIONS)
+  from:26/01/2020 till:24/02/2020 color:Wombelland
+  #WOMBELLAND OFFERED POSITION AS NON-GOVERNMENT ELECTOR WITH MOST ENDORSEMENTS
+  from:24/02/2020 till:31/03/2020 color:GK
+  #GOR KEBAB REINSTATED VIA PUPPET DUE TO COMMISSIONS (ELECTIONS ACT) 2020
+  from:01/04/2020 till:30/09/2020 color:RI
+  #TELEGRAMS (CAMPAIGN) ACT 2020 PASSED
+  from:01/10/2020 till:20/12/2020 color:Eurasies
+  #EURASIES CTED, POSITION VACANT 20-22/12/2022
+  from:22/12/2020 till:31/12/2020 color:Eritei
+  from:01/01/2021 till:30/06/2021 color:Helisweerde
+  from:01/07/2021 till:30/09/2021 color:Scarlett
+  from:01/10/2021 till:31/12/2021 color:NNU
+  from:01/01/2022 till:31/03/2022 color:Nardin
+  from:01/04/2022 till:30/09/2022 color:EPR
+  from:01/10/2022 till:31/12/2022 color:Nardin
+  from:01/01/2023 till:31/03/2023 color:Helisweerde
+  from:01/04/2023 till:30/06/2023 color:NP
+  from:01/07/2023 till:end color:Helisweerde
+
+  bar:1DC width:25 mark:(line,white) align:center fontsize:S
+  
+  from:01/02/2018 till:31/10/2018 color:Feria
+  from:01/11/2018 till:31/07/2020 color:Scarlett
+  from:01/08/2020 till:31/10/2020 color:SSM
+  from:01/11/2020 till:31/01/2021 color:Scarlett
+  from:01/02/2021 till:30/04/2021 color:KOD
+  from:01/05/2021 till:31/07/2021 color:Nardin
+  from:01/08/2021 till:11/10/2021 color:Helisweerde
+  #RIVIERENLAND LOST STATUS AS ELECTOR DUE TO WA RESIGNATION. 24 HOURS GIVEN TO REJOIN WA, POST THEN OFFERED TO GanymedEuropa 
+  #FOR 24 HOURS, NO RESPONSE. POST THEN OFFERED TO WALFO, AND ACCEPTED. POSITION VACANT 11-14/10/2021.
+  #SEE: https://www.nationstates.net/page=rmb/postid=45358876
+  from:14/10/2021 till:31/10/2021 color:Walfo
+  from:01/11/2021 till:31/07/2022 color:Scarlett
+  from:01/08/2022 till:31/10/2022 color:Qroma
+  from:01/11/2022 till:31/07/2023 color:Scarlett
+  from:01/08/2023 till:end color:Ottter
+  
+  
+  bar:2DC width:25 mark:(line,white) align:center fontsize:S
+  
+  from:01/03/2018 till:31/05/2018 color:Over
+  from:01/06/2018 till:31/08/2018 color:Thils
+  from:01/09/2018 till:30/11/2018 color:Qroma
+  from:01/12/2018 till:31/08/2019 color:SSM
+  from:01/09/2019 till:30/11/2019 color:Yahlia
+  from:01/12/2019 till:31/05/2020 color:Sparta
+  from:01/06/2020 till:31/08/2020 color:Eritei
+  from:01/09/2020 till:30/11/2020 color:Sather
+  from:01/12/2020 till:11/02/2021 color:Eins
+  from:11/02/2021 till:28/02/2021 color:Sather
+  from:01/03/2021 till:31/05/2021 color:Scarlett
+  from:01/06/2021 till:31/08/2021 color:Apab
+  from:01/09/2021 till:28/02/2022 color:Yahlia
+  from:01/03/2022 till:31/05/2022 color:NP
+  from:01/06/2022 till:28/02/2023 color:BaH
+  from:01/03/2023 till:31/05/2023 color:Diz
+  from:01/06/2023 till:31/08/2023 color:Slavatania
+  from:01/09/2023 till:end color:Diz
